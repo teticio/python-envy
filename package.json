@@ -2,6 +2,12 @@
   "name": "python-envy",
   "displayName": "Python Envy",
   "description": "Automatically activate Python virtual environments as you navigate the source code",
+  "publisher": "teticio",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teticio/python-envy.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.85.0"
