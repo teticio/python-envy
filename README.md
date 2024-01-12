@@ -1,6 +1,6 @@
 # python-envy README
 
-This is the README for your extension "python-envy". After writing up a brief description, we recommend including the following sections.
+Automatically activate Python virtual environments as you navigate the source code
 
 ## Features
 
