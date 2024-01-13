@@ -8,7 +8,7 @@ This is useful if you are working with a monorepo that contains sub-projects, mo
 
 As you can see in the following demo, the active Python environment changes as soon as a file is loaded into the editor.
 
-![demo](images/https://raw.githubusercontent.com/teticio/python-envy/main/images/screenshot.gif)
+![demo](https://raw.githubusercontent.com/teticio/python-envy/main/images/screenshot.gif)
 
 ## Requirements
 
@@ -35,7 +35,7 @@ N/A
 
 - Initial release
 
-## [0.1.0]
+## [0.1.1]
 
 - Added settings to enable / disable and to specify `.venv` directory.
 - Fixed for Windows.

@@ -8,7 +8,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-## [0.1.0]
+## [0.1.1]
 
 - Added settings to enable / disable and to specify `.venv` directory.
 - Fixed for Windows.
