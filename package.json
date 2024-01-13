@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/teticio/python-envy.git"
   },
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -17,15 +17,43 @@
   ],
   "icon": "icon.png",
   "activationEvents": [
-    "onLanguage:python"
+    "onDebugInitialConfigurations",
+    "onLanguage:python",
+    "onDebugResolve:python",
+    "workspaceContains:mspythonconfig.json",
+    "workspaceContains:pyproject.toml",
+    "workspaceContains:Pipfile",
+    "workspaceContains:setup.py",
+    "workspaceContains:requirements.txt",
+    "workspaceContains:manage.py",
+    "workspaceContains:app.py"
   ],
   "main": "./extension.js",
-  "contributes": {},
+  "contributes": {
+    "configuration": {
+      "title": "Python Envy",
+      "properties": {
+        "pythonEnvy.enabled": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable or disable Python Envy."
+        },
+        "pythonEnvy.venvName": {
+          "type": "string",
+          "default": ".venv",
+          "description": "Name of the Python virtual environment directory."
+        }
+      }
+    }
+  },
   "scripts": {
     "lint": "eslint .",
     "pretest": "yarn run lint",
     "test": "vscode-test"
   },
+  "extensionDependencies": [
+    "ms-python.python"
+  ],
   "devDependencies": {
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",

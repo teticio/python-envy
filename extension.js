@@ -7,23 +7,16 @@ const path = require("path");
  * @param {vscode.ExtensionContext} context
  */
 async function activate(context) {
-    let pythonApi;
-    try {
-        pythonApi = await PythonExtension.api();
-    } catch (error) {
-        vscode.window.showInformationMessage(
-            "Python Envy: please install the Python extension."
-        );
-        return;
-    }
-
+    let pythonApi = await PythonExtension.api();
     const activeEditor = vscode.window.activeTextEditor;
-    if (activeEditor) {
+    const pythonEnvyEnabled = vscode.workspace.getConfiguration().get('pythonEnvy.enabled');
+
+    if (activeEditor && pythonEnvyEnabled) {
         await setupPythonEnvironment(activeEditor, pythonApi);
     }
 
     let disposable = vscode.window.onDidChangeActiveTextEditor(async (editor) => {
-        if (editor) {
+        if (editor && pythonEnvyEnabled) {
             await setupPythonEnvironment(editor, pythonApi);
         }
     });
@@ -34,14 +27,18 @@ async function activate(context) {
 async function setupPythonEnvironment(editor, pythonApi) {
     let currentDir = path.dirname(editor.document.uri.fsPath);
     const root = path.parse(currentDir).root;
+    const venvName = vscode.workspace.getConfiguration().get('pythonEnvy.venvName');
 
     while (currentDir !== root) {
-        const venvPath = path.join(currentDir, ".venv");
+        const venvPath = path.join(currentDir, venvName);
 
         if (fs.existsSync(venvPath) && fs.lstatSync(venvPath).isDirectory()) {
             const currentPythonPath =
                 pythonApi.environments.getActiveEnvironmentPath();
-            const pythonPath = path.join(venvPath, "bin", "python");
+            let pythonPath = path.join(venvPath, "bin", "python");
+            if (!fs.existsSync(pythonPath)) {
+                pythonPath = path.join(venvPath, "Scripts", "python.exe");
+            }
 
             if (currentPythonPath.path !== pythonPath) {
                 try {
@@ -55,9 +52,9 @@ async function setupPythonEnvironment(editor, pythonApi) {
                     );
                 }
             }
-
             return;
         }
+
         currentDir = path.dirname(currentDir);
     }
 }
