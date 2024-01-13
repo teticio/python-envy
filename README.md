@@ -16,11 +16,7 @@ The [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-py
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
+This extension has the following settings:
 
 * `pythonEnvy.enable`: Enable/disable automatic Python environment activation for this Workspace or globally. Set to `false` by default.
 * `pythonEnvy.venv`: Location of the virtual environments. Set to `.venv` by default.
@@ -35,7 +31,7 @@ N/A
 
 - Initial release
 
-## [0.1.1]
+## [0.1.2]
 
 - Added settings to enable / disable and to specify `.venv` directory.
 - Fixed for Windows.
