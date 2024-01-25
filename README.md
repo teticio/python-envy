@@ -40,4 +40,4 @@ N/A
 
 ## [0.1.4]
 
-- Removed setting to enable / disable as use can enable extension globally or for workspace.
+- Removed setting to enable / disable as user can enable extension globally or for workspace.

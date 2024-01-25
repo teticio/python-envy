@@ -18,4 +18,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.1.4]
 
-- Removed setting to enable / disable as use can enable extension globally or for workspace.
+- Removed setting to enable / disable as user can enable extension globally or for workspace.
