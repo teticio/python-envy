@@ -6,7 +6,7 @@ This is useful if you are working with a monorepo that contains sub-projects, mo
 
 ## Features
 
-As you can see in the following demo, the active Python environment changes as soon as a file is loaded into the editor.
+As you can see in the following demo, the active Python environment changes as soon as a file is loaded into the editor. You may want to consider only enabling the extension for specific workspaces.
 
 ![demo](https://raw.githubusercontent.com/teticio/python-envy/main/images/screenshot.gif)
 
@@ -16,9 +16,8 @@ The [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-py
 
 ## Extension Settings
 
-This extension has the following settings:
+This extension has the following setting:
 
-* `pythonEnvy.enable`: Enable/disable automatic Python environment activation for this Workspace or globally. Set to `false` by default.
 * `pythonEnvy.venv`: Location of the virtual environments. Set to `.venv` by default.
 
 ## Known Issues
@@ -38,3 +37,7 @@ N/A
 - Now activates whenever Python extension activates and not just on loading a Python file.
 - Made dependency on Python extension explicit.
 - Updated README and include screenshot.
+
+## [0.1.4]
+
+- Removed setting to enable / disable as use can enable extension globally or for workspace.

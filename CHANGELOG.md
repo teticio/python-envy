@@ -15,3 +15,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Now activates whenever Python extension activates and not just on loading a Python file.
 - Made dependency on Python extension explicit.
 - Updated README and include screenshot.
+
+## [0.1.4]
+
+- Removed setting to enable / disable as use can enable extension globally or for workspace.

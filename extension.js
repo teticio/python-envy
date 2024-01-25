@@ -9,14 +9,13 @@ const path = require("path");
 async function activate(context) {
     let pythonApi = await PythonExtension.api();
     const activeEditor = vscode.window.activeTextEditor;
-    const pythonEnvyEnabled = vscode.workspace.getConfiguration().get('pythonEnvy.enabled');
 
-    if (activeEditor && pythonEnvyEnabled) {
+    if (activeEditor) {
         await setupPythonEnvironment(activeEditor, pythonApi);
     }
 
     let disposable = vscode.window.onDidChangeActiveTextEditor(async (editor) => {
-        if (editor && pythonEnvyEnabled) {
+        if (editor) {
             await setupPythonEnvironment(editor, pythonApi);
         }
     });
