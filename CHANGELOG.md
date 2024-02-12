@@ -2,11 +2,9 @@
 
 All notable changes to the "python-envy" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [0.1.4]
 
-## [0.0.1]
-
-- Initial release
+- Removed setting to enable / disable as user can enable extension globally or for workspace.
 
 ## [0.1.3]
 
@@ -16,6 +14,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Made dependency on Python extension explicit.
 - Updated README and include screenshot.
 
-## [0.1.4]
+## [0.0.1]
 
-- Removed setting to enable / disable as user can enable extension globally or for workspace.
+- Initial release

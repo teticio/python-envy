@@ -26,9 +26,9 @@ N/A
 
 ## Release Notes
 
-## [0.0.1]
+## [0.1.4]
 
-- Initial release
+- Removed setting to enable / disable as user can enable extension globally or for workspace.
 
 ## [0.1.3]
 
@@ -38,6 +38,6 @@ N/A
 - Made dependency on Python extension explicit.
 - Updated README and include screenshot.
 
-## [0.1.4]
+## [0.0.1]
 
-- Removed setting to enable / disable as user can enable extension globally or for workspace.
+- Initial release
