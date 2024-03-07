@@ -55,6 +55,9 @@ async function setupPythonEnvironment(editor, pythonApi) {
         }
 
         currentDir = path.dirname(currentDir);
+        if (currentDir === ".") {
+            currentDir = "";
+        }
     }
 }
 

@@ -2,6 +2,9 @@
 
 All notable changes to the "python-envy" extension will be documented in this file.
 
+## [0.1.5]
+- Fixed infinite loop bug for files opened with relative path
+
 ## [0.1.4]
 
 - Removed setting to enable / disable as user can enable extension globally or for workspace.
