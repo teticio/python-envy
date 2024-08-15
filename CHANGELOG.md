@@ -2,6 +2,9 @@
 
 All notable changes to the "python-envy" extension will be documented in this file.
 
+## [0.1.6]
+- Limit search for `.venv` directory to folder of workspace current file pertains to.
+
 ## [0.1.5]
 - Fixed infinite loop bug for files opened with relative path
 
