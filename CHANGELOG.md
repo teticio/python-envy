@@ -2,7 +2,7 @@
 
 All notable changes to the "python-envy" extension will be documented in this file.
 
-## [0.1.7]
+## [0.1.8]
 - Activate on presence of Jupyter notebook (`*.ipynb`).
 
 ## [0.1.6]

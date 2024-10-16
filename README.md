@@ -26,5 +26,5 @@ N/A
 
 ## Release Notes
 
-## [0.1.7]
+## [0.1.8]
 - Activate on presence of Jupyter notebook (`*.ipynb`).
