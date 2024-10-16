@@ -2,6 +2,9 @@
 
 All notable changes to the "python-envy" extension will be documented in this file.
 
+## [0.1.7]
+- Activate on presence of Jupyter notebook (`*.ipynb`).
+
 ## [0.1.6]
 - Limit search for `.venv` directory to folder of workspace current file pertains to.
 

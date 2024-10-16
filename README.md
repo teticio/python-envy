@@ -26,5 +26,5 @@ N/A
 
 ## Release Notes
 
-## [0.1.6]
-- Limit search for `.venv` directory to folder of workspace current file pertains to.
+## [0.1.7]
+- Activate on presence of Jupyter notebook (`*.ipynb`).
