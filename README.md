@@ -1,5 +1,8 @@
 # Python Envy
 
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/teticio.python-envy?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=teticio.python-envy)
+[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/teticio.python-envy?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=teticio.python-envy)
+
 Automatically activate Python virtual environments as you navigate the source code.
 
 This is useful if you are working with a monorepo that contains sub-projects, modules, libraries or deployments with different Python dependencies. Or perhaps you want to automatically activate a development environment when you click on a test file.
