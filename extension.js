@@ -26,7 +26,8 @@ async function activate(context) {
 async function setupPythonEnvironment(editor, pythonApi) {
     let currentDir = path.dirname(editor.document.uri.fsPath);
     const root = path.parse(currentDir).root;
-    const currentWorkspaceFolder = vscode.workspace.getWorkspaceFolder(vscode.Uri.file(editor.document.uri.path)).uri.path;
+    const currentWorkspaceFolder = vscode.workspace.getWorkspaceFolder(vscode.Uri.file(editor.document.uri.path));
+    const currentWorkspaceFolderPath = currentWorkspaceFolder ? currentWorkspaceFolder.uri.path : null;
     const venvName = vscode.workspace.getConfiguration().get('pythonEnvy.venvName');
 
     while (currentDir !== root) {
@@ -55,7 +56,7 @@ async function setupPythonEnvironment(editor, pythonApi) {
             return;
         }
 
-        if (currentDir === currentWorkspaceFolder) {
+        if (currentDir === currentWorkspaceFolderPath) {
             break;
         }
 
