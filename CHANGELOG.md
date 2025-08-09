@@ -2,9 +2,11 @@
 
 All notable changes to the "python-envy" extension will be documented in this file.
 
+## [0.1.10]
+- Fix issue #3 with multiple workspaces.
+
 ## [0.1.9]
 - Fix issue #4.
-
 
 ## [0.1.8]
 - Activate on presence of Jupyter notebook (`*.ipynb`).

@@ -35,17 +35,20 @@ async function setupPythonEnvironment(editor, pythonApi) {
 
         if (fs.existsSync(venvPath) && fs.lstatSync(venvPath).isDirectory()) {
             const currentPythonPath =
-                pythonApi.environments.getActiveEnvironmentPath();
+                pythonApi.environments.getActiveEnvironmentPath(currentWorkspaceFolder.uri);
             let pythonPath = path.join(venvPath, "bin", "python");
+
             if (!fs.existsSync(pythonPath)) {
                 pythonPath = path.join(venvPath, "Scripts", "python.exe");
             }
 
             if (currentPythonPath.path !== pythonPath) {
                 try {
-                    await pythonApi.environments.updateActiveEnvironmentPath(pythonPath);
+                    const relativePath = path.relative(currentWorkspaceFolderPath, venvPath);
+
+                    await pythonApi.environments.updateActiveEnvironmentPath(pythonPath, currentWorkspaceFolder.uri);
                     vscode.window.showInformationMessage(
-                        `Python Envy: interpreter set to: ${pythonPath}`
+                        `Python Envy: interpreter set to ${relativePath} for ${currentWorkspaceFolder.name}`
                     );
                 } catch (error) {
                     vscode.window.showErrorMessage(

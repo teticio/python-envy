@@ -28,5 +28,5 @@ N/A
 
 ## Release Notes
 
-## [0.1.9]
-- Fix issue #4.
+## [0.1.10]
+- Fix issue #3 with multiple workspaces.
