@@ -2,6 +2,10 @@
 
 All notable changes to the "python-envy" extension will be documented in this file.
 
+## [0.1.11]
+- Fix issue [#8](https://github.com/teticio/python-envy/issues/8) introduce option to disable notification
+  when the interpreter gets activated/switched.
+
 ## [0.1.10]
 - Fix issue #3 with multiple workspaces.
 

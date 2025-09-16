@@ -28,7 +28,11 @@ async function setupPythonEnvironment(editor, pythonApi) {
     const root = path.parse(currentDir).root;
     const currentWorkspaceFolder = vscode.workspace.getWorkspaceFolder(vscode.Uri.file(editor.document.uri.path));
     const currentWorkspaceFolderPath = currentWorkspaceFolder ? currentWorkspaceFolder.uri.path : null;
-    const venvName = vscode.workspace.getConfiguration().get('pythonEnvy.venvName');
+
+    // Get configuration settings
+    const config = vscode.workspace.getConfiguration('pythonEnvy');
+    const venvName = config.get('venvName');
+    const showNotifications = config.get('showNotifications', true); // Default to true for backward compatibility
 
     while (currentDir !== root) {
         const venvPath = path.join(currentDir, venvName);
@@ -47,9 +51,13 @@ async function setupPythonEnvironment(editor, pythonApi) {
                     const relativePath = path.relative(currentWorkspaceFolderPath, venvPath);
 
                     await pythonApi.environments.updateActiveEnvironmentPath(pythonPath, currentWorkspaceFolder.uri);
-                    vscode.window.showInformationMessage(
-                        `Python Envy: interpreter set to ${relativePath} for ${currentWorkspaceFolder.name}`
-                    );
+
+                    // Only show notification if enabled in settings
+                    if (showNotifications) {
+                        vscode.window.showInformationMessage(
+                            `Python Envy: interpreter set to ${relativePath} for ${currentWorkspaceFolder.name}`
+                        );
+                    }
                 } catch (error) {
                     vscode.window.showErrorMessage(
                         `Python Envy: error setting Python interpreter: ${error.message}`

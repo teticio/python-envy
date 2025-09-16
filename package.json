@@ -46,6 +46,11 @@
           "type": "string",
           "default": ".venv",
           "description": "Name of the Python virtual environment directory."
+        },
+        "pythonEnvy.showNotifications": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show information messages when Python interpreter is automatically switched"
         }
       }
     }
