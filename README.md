@@ -21,6 +21,7 @@ The [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-py
 This extension has the following setting:
 
 * `pythonEnvy.venv`: Location of the virtual environments. Set to `.venv` by default.
+* `pythonEnvy.showNotifications`: Show information messages when Python interpreter is automatically switched. Set to `true` by default.
 
 ## Known Issues
 
@@ -28,5 +29,6 @@ N/A
 
 ## Release Notes
 
-## [0.1.10]
-- Fix issue #3 with multiple workspaces.
+## [0.1.11]
+- Fix issue [#8](https://github.com/teticio/python-envy/issues/8) introduce option to disable notification
+  when the interpreter gets activated/switched.
