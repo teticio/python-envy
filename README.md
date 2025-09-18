@@ -18,7 +18,7 @@ The [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-py
 
 ## Extension Settings
 
-This extension has the following setting:
+This extension has the following settings:
 
 * `pythonEnvy.venv`: Location of the virtual environments. Set to `.venv` by default.
 * `pythonEnvy.showNotifications`: Show information messages when Python interpreter is automatically switched. Set to `true` by default.
