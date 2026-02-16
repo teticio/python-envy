@@ -2,6 +2,11 @@
 
 All notable changes to the "python-envy" extension will be documented in this file.
 
+## [0.1.12]
+- Add PEP 723 inline script metadata support. When a Python file contains `# /// script` metadata,
+  `uv python find --script` is used to resolve and activate the correct Python interpreter.
+  Requires [uv](https://docs.astral.sh/uv/) to be installed. Can be toggled with `pythonEnvy.enablePep723`.
+
 ## [0.1.11]
 - Fix issue [#8](https://github.com/teticio/python-envy/issues/8) introduce option to disable notification
   when the interpreter gets activated/switched.

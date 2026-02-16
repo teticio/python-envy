@@ -22,6 +22,7 @@ This extension has the following settings:
 
 * `pythonEnvy.venv`: Location of the virtual environments. Set to `.venv` by default.
 * `pythonEnvy.showNotifications`: Show information messages when Python interpreter is automatically switched. Set to `true` by default.
+* `pythonEnvy.enablePep723`: Detect [PEP 723](https://peps.python.org/pep-0723/) inline script metadata and use `uv python find --script` to activate the appropriate Python interpreter. Requires [uv](https://docs.astral.sh/uv/) to be installed. Set to `true` by default.
 
 ## Known Issues
 
