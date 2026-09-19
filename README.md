@@ -1,6 +1,6 @@
 # Python Envy
 
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/teticio.python-envy?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=teticio.python-envy)
+[![Visual Studio Marketplace Installs](https://vsmarketplacebadges.dev/installs-short/teticio.python-envy.svg?style=flat-square&label=Visual%20Studio%20Marketplace%20Installs)](https://marketplace.visualstudio.com/items?itemName=teticio.python-envy)
 
 Automatically activate Python virtual environments as you navigate the source code.
 
