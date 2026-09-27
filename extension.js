@@ -37,7 +37,7 @@ async function setupPythonEnvironment(editor, pythonApi) {
     while (currentDir !== root) {
         const venvPath = path.join(currentDir, venvName);
 
-        if (fs.existsSync(venvPath) && fs.lstatSync(venvPath).isDirectory()) {
+        if (fs.existsSync(venvPath) && fs.statSync(venvPath).isDirectory()) {
             const currentPythonPath =
                 pythonApi.environments.getActiveEnvironmentPath(currentWorkspaceFolder.uri);
             let pythonPath = path.join(venvPath, "bin", "python");
